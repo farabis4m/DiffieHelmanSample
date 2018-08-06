@@ -12,6 +12,8 @@
 		2CA8590321185D5100F492E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA8590121185D5100F492E8 /* Main.storyboard */; };
 		2CA8590521185D5200F492E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA8590421185D5200F492E8 /* Assets.xcassets */; };
 		2CA8590821185D5200F492E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA8590621185D5200F492E8 /* LaunchScreen.storyboard */; };
+		2CA8592E211867D300F492E8 /* SmartTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8592D211867D300F492E8 /* SmartTouch.swift */; };
+		54C0F32B196579AD45BE057F /* Pods_DiffieHelmanSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0EF013E380DDBB049AA4DF /* Pods_DiffieHelmanSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		2CA8590421185D5200F492E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CA8590721185D5200F492E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CA8590921185D5200F492E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA8592D211867D300F492E8 /* SmartTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTouch.swift; sourceTree = "<group>"; };
+		6A03B95170941B747B68E0C9 /* Pods-DiffieHelmanSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiffieHelmanSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiffieHelmanSample/Pods-DiffieHelmanSample.release.xcconfig"; sourceTree = "<group>"; };
+		CA0EF013E380DDBB049AA4DF /* Pods_DiffieHelmanSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiffieHelmanSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E759C84C532273886E538DB8 /* Pods-DiffieHelmanSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiffieHelmanSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiffieHelmanSample/Pods-DiffieHelmanSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C0F32B196579AD45BE057F /* Pods_DiffieHelmanSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				2CA858FC21185D5100F492E8 /* DiffieHelmanSample */,
 				2CA858FB21185D5100F492E8 /* Products */,
+				E6F07280FECCF5FFAD368B9C /* Pods */,
+				ACF212DA08ACDD058B6A35AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +65,30 @@
 			children = (
 				2CA858FD21185D5100F492E8 /* AppDelegate.swift */,
 				2CA858FF21185D5100F492E8 /* ViewController.swift */,
+				2CA8592D211867D300F492E8 /* SmartTouch.swift */,
 				2CA8590121185D5100F492E8 /* Main.storyboard */,
 				2CA8590421185D5200F492E8 /* Assets.xcassets */,
 				2CA8590621185D5200F492E8 /* LaunchScreen.storyboard */,
 				2CA8590921185D5200F492E8 /* Info.plist */,
 			);
 			path = DiffieHelmanSample;
+			sourceTree = "<group>";
+		};
+		ACF212DA08ACDD058B6A35AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA0EF013E380DDBB049AA4DF /* Pods_DiffieHelmanSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6F07280FECCF5FFAD368B9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E759C84C532273886E538DB8 /* Pods-DiffieHelmanSample.debug.xcconfig */,
+				6A03B95170941B747B68E0C9 /* Pods-DiffieHelmanSample.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CA8590C21185D5200F492E8 /* Build configuration list for PBXNativeTarget "DiffieHelmanSample" */;
 			buildPhases = (
+				A33B57A5478818052EB96D72 /* [CP] Check Pods Manifest.lock */,
 				2CA858F621185D5100F492E8 /* Sources */,
 				2CA858F721185D5100F492E8 /* Frameworks */,
 				2CA858F821185D5100F492E8 /* Resources */,
+				3FBCCEA7C5BF489FF63C2ADF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,11 +159,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3FBCCEA7C5BF489FF63C2ADF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DiffieHelmanSample/Pods-DiffieHelmanSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FTLocalizationManager/FTLocalizationManager.framework",
+				"${BUILT_PRODUCTS_DIR}/KSAUtils/KSAUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTLocalizationManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSAUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiffieHelmanSample/Pods-DiffieHelmanSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A33B57A5478818052EB96D72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiffieHelmanSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2CA858F621185D5100F492E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CA8592E211867D300F492E8 /* SmartTouch.swift in Sources */,
 				2CA8590021185D5100F492E8 /* ViewController.swift in Sources */,
 				2CA858FE21185D5100F492E8 /* AppDelegate.swift in Sources */,
 			);
@@ -278,6 +351,7 @@
 		};
 		2CA8590D21185D5200F492E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E759C84C532273886E538DB8 /* Pods-DiffieHelmanSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -298,6 +372,7 @@
 		};
 		2CA8590E21185D5200F492E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A03B95170941B747B68E0C9 /* Pods-DiffieHelmanSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;

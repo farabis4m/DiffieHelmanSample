@@ -1,0 +1,45 @@
+PODS:
+  - FTLocalizationManager (1.0.0)
+  - KSAUtils (0.1.0):
+    - KSAUtils/KSAUtils (= 0.1.0)
+    - KSAUtils/KSAUtils-no-arc (= 0.1.0)
+    - KSAUtils/Libraries (= 0.1.0)
+  - KSAUtils/KSAUtils (0.1.0)
+  - KSAUtils/KSAUtils-no-arc (0.1.0)
+  - KSAUtils/Libraries (0.1.0):
+    - KSAUtils/Libraries/openssl (= 0.1.0)
+  - KSAUtils/Libraries/openssl (0.1.0)
+  - ObjectMapper (3.3.0)
+
+DEPENDENCIES:
+  - FTLocalizationManager (from `https://github.com/farabis4m/FTLocalizationManager.git`)
+  - KSAUtils (from `http://10.10.10.84:8111/scm/git/KSAUtils`, branch `master-touchId`)
+  - ObjectMapper (~> 3.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ObjectMapper
+
+EXTERNAL SOURCES:
+  FTLocalizationManager:
+    :git: https://github.com/farabis4m/FTLocalizationManager.git
+  KSAUtils:
+    :branch: master-touchId
+    :git: http://10.10.10.84:8111/scm/git/KSAUtils
+
+CHECKOUT OPTIONS:
+  FTLocalizationManager:
+    :commit: eef632593ceb1e705da66bfa16b4aad1e35e3800
+    :git: https://github.com/farabis4m/FTLocalizationManager.git
+  KSAUtils:
+    :commit: c5883cb34ea7cd641584f0a1502b71aa9f8819e9
+    :git: http://10.10.10.84:8111/scm/git/KSAUtils
+
+SPEC CHECKSUMS:
+  FTLocalizationManager: a458aa4e83bb28d742368ad64f8e726caa91818c
+  KSAUtils: 1fe2cfccb564e4c91f1e102e9f0f30eb6958e43d
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+
+PODFILE CHECKSUM: d87474de51e3c26a05349e3495851c8fb3aab4a1
+
+COCOAPODS: 1.5.3
