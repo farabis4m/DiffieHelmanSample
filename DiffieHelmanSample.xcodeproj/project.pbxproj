@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3FFB5421187668008B3A7B /* ApiModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FFB4F21187667008B3A7B /* ApiModule.swift */; };
+		2C3FFB5521187668008B3A7B /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FFB5021187667008B3A7B /* Requestable.swift */; };
+		2C3FFB5621187668008B3A7B /* MappableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FFB5121187667008B3A7B /* MappableObject.swift */; };
+		2C3FFB5721187668008B3A7B /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FFB5221187667008B3A7B /* ServiceManager.swift */; };
+		2C3FFB5821187668008B3A7B /* ApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FFB5321187667008B3A7B /* ApiPath.swift */; };
 		2CA858FE21185D5100F492E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA858FD21185D5100F492E8 /* AppDelegate.swift */; };
 		2CA8590021185D5100F492E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA858FF21185D5100F492E8 /* ViewController.swift */; };
 		2CA8590321185D5100F492E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA8590121185D5100F492E8 /* Main.storyboard */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C3FFB4F21187667008B3A7B /* ApiModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiModule.swift; sourceTree = "<group>"; };
+		2C3FFB5021187667008B3A7B /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		2C3FFB5121187667008B3A7B /* MappableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableObject.swift; sourceTree = "<group>"; };
+		2C3FFB5221187667008B3A7B /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		2C3FFB5321187667008B3A7B /* ApiPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiPath.swift; sourceTree = "<group>"; };
 		2CA858FA21185D5100F492E8 /* DiffieHelmanSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiffieHelmanSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA858FD21185D5100F492E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA858FF21185D5100F492E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +52,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C3FFB4E21187667008B3A7B /* Service Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2C3FFB4F21187667008B3A7B /* ApiModule.swift */,
+				2C3FFB5021187667008B3A7B /* Requestable.swift */,
+				2C3FFB5121187667008B3A7B /* MappableObject.swift */,
+				2C3FFB5221187667008B3A7B /* ServiceManager.swift */,
+				2C3FFB5321187667008B3A7B /* ApiPath.swift */,
+			);
+			path = "Service Manager";
+			sourceTree = "<group>";
+		};
 		2CA858F121185D5100F492E8 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +85,7 @@
 		2CA858FC21185D5100F492E8 /* DiffieHelmanSample */ = {
 			isa = PBXGroup;
 			children = (
+				2C3FFB4E21187667008B3A7B /* Service Manager */,
 				2CA858FD21185D5100F492E8 /* AppDelegate.swift */,
 				2CA858FF21185D5100F492E8 /* ViewController.swift */,
 				2CA8592D211867D300F492E8 /* SmartTouch.swift */,
@@ -167,12 +190,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DiffieHelmanSample/Pods-DiffieHelmanSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/FTLocalizationManager/FTLocalizationManager.framework",
 				"${BUILT_PRODUCTS_DIR}/KSAUtils/KSAUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTLocalizationManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSAUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -207,9 +234,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3FFB5621187668008B3A7B /* MappableObject.swift in Sources */,
+				2C3FFB5521187668008B3A7B /* Requestable.swift in Sources */,
 				2CA8592E211867D300F492E8 /* SmartTouch.swift in Sources */,
 				2CA8590021185D5100F492E8 /* ViewController.swift in Sources */,
+				2C3FFB5421187668008B3A7B /* ApiModule.swift in Sources */,
+				2C3FFB5721187668008B3A7B /* ServiceManager.swift in Sources */,
 				2CA858FE21185D5100F492E8 /* AppDelegate.swift in Sources */,
+				2C3FFB5821187668008B3A7B /* ApiPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,4 +1,8 @@
 PODS:
+  - Alamofire (4.7.3)
+  - AlamofireObjectMapper (5.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.3)
   - FTLocalizationManager (1.0.0)
   - KSAUtils (0.1.0):
     - KSAUtils/KSAUtils (= 0.1.0)
@@ -12,12 +16,16 @@ PODS:
   - ObjectMapper (3.3.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - AlamofireObjectMapper (~> 5.1)
   - FTLocalizationManager (from `https://github.com/farabis4m/FTLocalizationManager.git`)
   - KSAUtils (from `http://10.10.10.84:8111/scm/git/KSAUtils`, branch `master-touchId`)
-  - ObjectMapper (~> 3.1)
+  - ObjectMapper (~> 3.3)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
     - ObjectMapper
 
 EXTERNAL SOURCES:
@@ -36,10 +44,12 @@ CHECKOUT OPTIONS:
     :git: http://10.10.10.84:8111/scm/git/KSAUtils
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
   FTLocalizationManager: a458aa4e83bb28d742368ad64f8e726caa91818c
   KSAUtils: 1fe2cfccb564e4c91f1e102e9f0f30eb6958e43d
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
 
-PODFILE CHECKSUM: d87474de51e3c26a05349e3495851c8fb3aab4a1
+PODFILE CHECKSUM: ab5e26dcfc2ff488ad4a95a235f050d7d7bdeda1
 
 COCOAPODS: 1.5.3
