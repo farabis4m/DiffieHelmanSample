@@ -1,4 +1,4 @@
-//
+
 //  ViewController.swift
 //  DiffieHelmanSample
 //
@@ -7,28 +7,40 @@
 //
 
 import UIKit
+import PromiseKit
+import Alamofire
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var labelStatus: UILabel?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        labelStatus?.text = ""
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     @IBAction func requestAction(_ sender: Any) {
         
+        labelStatus?.text = ""
         
+        SmarrtTouch.generateKeys().then { smartTouch in
+            smartTouch.validateClientPublicKey().done { [weak self] success in
+                print("Success >>> \(success.result)")
+                self?.labelStatus?.text = success.result
+                
+            }
+            }.catch { [weak self] error in
+                print("Errorrrr >>>> \(error.localizedDescription)")
+                self?.labelStatus?.text = error.localizedDescription
+        }
+
+
     }
 }
 
-extension ViewController {
-    
-    
-}
+
 

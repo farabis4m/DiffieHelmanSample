@@ -10,7 +10,8 @@ import Foundation
 
 enum ApiPath: String {
     
-    case somePathName
+    case generateKeys
+    case registerTouchId
     
     var name: String {
         return rawValue

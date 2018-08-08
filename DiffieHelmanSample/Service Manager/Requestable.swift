@@ -90,23 +90,30 @@ extension Requestable {
             requestParams = defaultParameters.merging(parameters ?? [:]) { _, custom in custom }
         }
         
-        let urlRequest = try URLRequest(url: url, method: method)
-        return try Alamofire.URLEncoding.default.encode(urlRequest, with: requestParams)
+        var urlRequest = try URLRequest(url: url, method: method)
+        
+        do {
+            if method == .post {
+                urlRequest.httpBody = try JSONSerialization.data(withJSONObject: requestParams ?? [:], options: .prettyPrinted)
+            }
+        }
+        return try Alamofire.JSONEncoding.default.encode(urlRequest)
+//        return try Alamofire.URLEncoding.default.encode(urlRequest, with: requestParams)
     }
     
     @discardableResult
     func request(with responseObject: @escaping (DefaultDataResponse) -> Void) -> DataRequest {
-        return ServiceManager.shared.request(self).response(completionHandler: responseObject)//.validateErrors()
+        return ServiceManager.shared.request(self).response(completionHandler: responseObject).validateErrors()
     }
     
     @discardableResult
     func request<T: BaseMappable>(with responseObject: @escaping (DataResponse<T>) -> Void) -> DataRequest {
-        return ServiceManager.shared.request(self).responseObject(completionHandler: responseObject)//.validateErrors()
+        return ServiceManager.shared.request(self).responseObject(completionHandler: responseObject).validateErrors()
     }
     
     @discardableResult
     func request<T: BaseMappable>(with responseArray: @escaping (DataResponse<[T]>) -> Void) -> DataRequest {
-        return ServiceManager.shared.request(self).responseArray(completionHandler: responseArray)//.validateErrors()
+        return ServiceManager.shared.request(self).responseArray(completionHandler: responseArray).validateErrors()
     }
     
     @discardableResult

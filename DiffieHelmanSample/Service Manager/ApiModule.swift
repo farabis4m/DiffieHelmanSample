@@ -10,7 +10,7 @@ import Foundation
 
 enum ApiModule: String {
     
-    case vehicleTestCenters = "vehicle-test-centers"
+    case scsAdmin = "SCS_ADMIN"
     
     var name: String {
         return rawValue

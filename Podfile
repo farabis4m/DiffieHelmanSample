@@ -8,6 +8,11 @@ def pods
     pod 'Alamofire',                '~> 4.7'
     pod 'AlamofireObjectMapper',    '~> 5.1'
     pod 'ObjectMapper',             '~> 3.3'
+    pod 'PromiseKit',               '~> 6.3'
+    pod 'SwiftyBeaver',             '~> 1.4'
+    pod 'PromiseKit/Alamofire', '~> 6.0'
+    pod 'BigInt', '~> 3.1'
+    pod 'UIAlertController+Blocks', '~> 0.9'
 end
 
 target 'DiffieHelmanSample' do

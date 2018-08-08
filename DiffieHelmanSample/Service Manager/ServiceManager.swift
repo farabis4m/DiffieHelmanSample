@@ -7,7 +7,6 @@
 //
 
 import Alamofire
-import RealmSwift
 
 class ServiceManager {
     
@@ -42,11 +41,26 @@ extension ServiceManager {
         func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
             var urlRequest = urlRequest
             
+            
             // update default http headers
-            urlRequest.allHTTPHeaderFields?.merge(Alamofire.SessionManager.defaultHTTPHeaders) { (current, _) in current }
+            var defaultHTTPHeaders = Alamofire.SessionManager.defaultHTTPHeaders
+            defaultHTTPHeaders.updateValue("application/json", forKey: "Content-Type")
+
+            urlRequest.allHTTPHeaderFields?.merge(defaultHTTPHeaders) { (current, _) in current }
             
             // customize
-            
+            /*
+             let configuration = URLSessionConfiguration.default
+             var allHeaders = Alamofire.SessionManager.default.session.configuration.httpAdditionalHeaders ?? [:]
+             allHeaders.updateValue(["application/json","text/plain"], forKey: "Accept")
+             allHeaders.updateValue("application/json", forKey: "Content-Type")
+             
+             if Environment.Configuration.current.mockEnabled {
+             allHeaders.updateValue("true", forKey: "mock")
+             }
+             
+             configuration.httpAdditionalHeaders = allHeaders
+ */
             return urlRequest
         }
     }
@@ -58,4 +72,18 @@ extension ServiceManager {
             return Configuration.current.baseURL
         }
     }
+}
+
+class Configuration {
+    
+    // the current singleton configuration
+    static let current = Configuration()
+    
+    
+    // the base url
+    var baseURL: URL {
+        let stringURL = "http://10.10.100.178:8090"
+        return URL(string: stringURL) ?? URL(fileURLWithPath: "")
+    }
+    
 }

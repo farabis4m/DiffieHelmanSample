@@ -30,14 +30,26 @@
                                     <action selector="requestAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RU0-Os-hA4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TG-Ac-fXZ">
+                                <rect key="frame" x="20" y="388.5" width="335" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4a2-Cj-OYx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JeY-kg-BBQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7TG-Ac-fXZ" secondAttribute="trailing" constant="20" id="SEg-oM-Hvo"/>
+                            <constraint firstItem="7TG-Ac-fXZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ViS-O6-z0c"/>
                             <constraint firstItem="4a2-Cj-OYx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cDM-XQ-X9F"/>
+                            <constraint firstItem="7TG-Ac-fXZ" firstAttribute="top" secondItem="4a2-Cj-OYx" secondAttribute="bottom" constant="30" id="snh-Qj-tGR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="labelStatus" destination="7TG-Ac-fXZ" id="Ifq-VI-YaD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
